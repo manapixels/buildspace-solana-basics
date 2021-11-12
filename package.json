@@ -1,0 +1,33 @@
+{
+    "name": "@buildspace-solana-basics/monorepo",
+    "version": "1.0.0",
+    "keywords": [
+      "ethereum",
+      "react",
+      "workspaces",
+      "yarn"
+    ],
+    "private": true,
+    "scripts": {
+      "react-app:build": "yarn workspace @buildspace-solana-basics/react-app build --max-old-space-size=12288",
+      "react-app:eject": "yarn workspace @buildspace-solana-basics/react-app eject",
+      "react-app:start": "yarn workspace @buildspace-solana-basics/react-app start",
+      "react-app:test": "yarn workspace @buildspace-solana-basics/react-app test",
+      "build": "yarn workspace @buildspace-solana-basics/react-app build --max-old-space-size=12288",
+      "prettier": "yarn workspace @buildspace-solana-basics/react-app prettier",
+      "start": "yarn workspace @buildspace-solana-basics/react-app start",
+      "ipfs": "yarn workspace @buildspace-solana-basics/react-app ipfs",
+      "surge": "yarn workspace @buildspace-solana-basics/react-app surge"
+    },
+    "workspaces": {
+      "packages": [
+        "packages/*"
+      ],
+      "nohoist": [
+        "**/hardhat",
+        "**/hardhat/**"
+      ]
+    },
+    "dependencies": {},
+    "devDependencies": {}
+  }
